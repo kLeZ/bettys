@@ -1,1 +1,51 @@
-theme: jekyll-theme-architect
+timezone: Europe/London
+title: Your awesome title
+email: your-email@example.com
+description: >-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: ""
+copyright: Copyright ©  2019
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+include:
+    - _pages
+
+defaults:
+    - scope:
+          path: ""
+      values:
+          author:
+              name: Author
+          header_background_url: 
+    - scope:
+          path: ""
+          type: "posts"
+      values:
+          layout: "post"
+          permalink: /:year/:month/:day/:title/
+          post: true
+
+show_excerpts: true
+excerpt_separator: "{% include more.html %}"
+
+comments:
+    enabled: false
+reading_time:
+    enabled: false
+
+markdown: kramdown
+plugins:
+  - github-pages
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+    - docs/
+
+github: [metadata]
