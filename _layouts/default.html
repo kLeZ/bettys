@@ -9,12 +9,17 @@
 	{%- assign classes = classes_arr | join: " " -%}
 
 	<body class="{{ classes }}">
+	{%- if page.header == true -%}
 		{% include header.html %}
+	{%- endif -%}
+	{%- if page.navbar == true -%}
 		{% include navbar.html items=site.data.navigation %}
+	{%- endif -%}
 		<main class="container-fluid" aria-label="Content">
 			<div class="row">
 				{{ content }}
 			</div>
+		{%- if page.up_arrow == true -%}
 			<div class="row justify-content-end text-right">
 				<div class="col-6">
 					<a id="scroller" class="btn m-3 p-2 text-light bg-dark rounded" title="Scroll to the top of the page">
@@ -22,8 +27,11 @@
 					</a>
 				</div>
 			</div>
+		{%- endif -%}
 		</main>
+	{%- if page.footer == true -%}
 		{% include footer.html %}
+	{%- endif -%}
 		{% include scripts.html %}
 	</body>
 </html>
