@@ -78,8 +78,3 @@
 @mixin sans-serif-font() {
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
-@mixin menu-rotate($degrees, $rotation) {
-	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})";
-	transform: rotate($degrees) skewX(40deg);
-}
