@@ -90,8 +90,6 @@ $centerSectionDiameter: $diameter * 0.6;
 $labelWidth: $centerSectionDiameter * 0.5;
 $arrowWidth: $diameter / 20;
 
-$colour-list: #11703C, #8A8D53, #B6238E, #5FC3BA, #9303ED, #1FF8F2, #58CE62, #119451, #2B0EEC;
-
 .circular-menu-container {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -126,7 +124,7 @@ $colour-list: #11703C, #8A8D53, #B6238E, #5FC3BA, #9303ED, #1FF8F2, #58CE62, #11
 	border-radius: 500px;
 	border-radius: 50%;
 	text-align: center;
-	background: #fff;
+	background: $center-section-background;
 	box-shadow: inset 0px 0px 15px #333;
 	display: none;
 	z-index: 1;
@@ -171,7 +169,7 @@ $colour-list: #11703C, #8A8D53, #B6238E, #5FC3BA, #9303ED, #1FF8F2, #58CE62, #11
 	max-width: $labelWidth * 0.66 + px;
 	margin: 0 auto;
 	margin-top: $labelWidth * 0.4 + px;
-	color: #fff;
+	color: #000000;
 }
 
 .circular-menu li span.arrow {
@@ -300,4 +298,18 @@ $arrowRadius: $arrowHoverRadius + $arrowWidth;
 
 .fadeInUp {
 	animation-name: fadeInUp;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade {
+	animation-name: fade;
 }

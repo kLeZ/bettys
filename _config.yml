@@ -24,6 +24,7 @@ defaults:
           header: true
           navbar: true
           up_arrow: true
+          row_wrap: true
           footer: true
           author:
               name: Author
