@@ -4,16 +4,9 @@ html {
 	min-height: 100%;
 }
 
-body {
-	margin-bottom: $footer-height;
-	/* Margin bottom by footer height */
-}
-
 footer.site-footer {
 	position: absolute;
 	bottom: 0;
-	height: $footer-height;
-	/* Set the fixed height of the footer here */
 	padding: 50px 0 65px;
 
 	.list-inline {

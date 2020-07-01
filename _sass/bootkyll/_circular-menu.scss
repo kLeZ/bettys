@@ -81,7 +81,7 @@
 // minimum: 2 
 // maximum: 10
 
-$items: 7;
+$items: 5;
 $right-pointer: 137;
 $top-pointer: 87;
 $diameter: 600;
@@ -212,15 +212,12 @@ $arrowRadius: $arrowHoverRadius + $arrowWidth;
 	$xLabel: sin($deg * $i - $deg - 90) * $labelRadius - $labelWidth / 2 + px;
 	$yLabel: cos($deg * $i - $deg - 90) * $labelRadius - $labelWidth / 2 + px;
 
-	//
 	$xArrowHover: sin($deg * $i - $deg - 90) * $arrowHoverRadius - $arrowWidth * 0.5 + px;
 	$yArrowHover: cos($deg * $i - $deg - 90) * $arrowHoverRadius - $arrowWidth * 0.5 + px;
 
-	//
 	$xArrow: sin($deg * $i - $deg - 90) * $arrowRadius - $arrowWidth * 0.5 + px;
 	$yArrow: cos($deg * $i - $deg - 90) * $arrowRadius - $arrowWidth * 0.5 + px;
 
-	//
 	$xTranslate: -30 + px;
 	$yTranslate: 30 + px;
 
@@ -248,7 +245,7 @@ $arrowRadius: $arrowHoverRadius + $arrowWidth;
 		background: nth($colour-list, $i);
 	}
 
-	//arrow position
+	//pointer position
 	.circular-menu li:nth-child(#{$i}) img.pointer {
 		transform:  rotateZ($deg * ($i - 1));
 		@if $i > 1 and $i < (($items / 2) + 1) {

@@ -40,5 +40,11 @@
 				"slow"
 			);
 		});
+		$('[data-toggle="popover"]').popover();
+		if ($('footer.site-footer').length) {
+			let footer_height="12rem";
+			$('body').css('margin-bottom', footer_height);
+			$('footer.site-footer').css('height', footer_height);
+		}
 	});
 })(jQuery); // End of use strict
