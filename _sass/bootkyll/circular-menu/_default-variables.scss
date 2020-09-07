@@ -1,0 +1,19 @@
+// how many menu items do you wish to display? //
+// minimum: 2 
+// maximum: 10
+
+$items: 6;
+
+// form-factor specific variables
+$right-pointer: 137;
+$top-pointer: 87;
+$diameter: 600;
+$radius: $diameter * 0.5;
+$borderRadius: $diameter * 0.8;
+$centerPadding: 55;
+$centerImage: 250;
+$pointerImage: 75;
+$centerSectionDiameter: $diameter * 0.6;
+$labelWidth: $centerSectionDiameter * 0.5;
+$arrowWidth: $diameter / 20;
+$labelFontSize: 20;

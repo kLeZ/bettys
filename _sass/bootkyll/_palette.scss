@@ -55,19 +55,19 @@ $gradient-top-right: linear-gradient(45deg, #abb3deff, #fafea7ff, #dfa5b7ff, #a6
 $gradient-bottom-right: linear-gradient(135deg, #abb3deff, #fafea7ff, #dfa5b7ff, #a6baa8ff, #cfb3cdff, #87c09bff, #26cf7dff, #c4abcfff, #bcb1c8ff, #acb6aaff);
 $gradient-top-left: linear-gradient(225deg, #abb3deff, #fafea7ff, #dfa5b7ff, #a6baa8ff, #cfb3cdff, #87c09bff, #26cf7dff, #c4abcfff, #bcb1c8ff, #acb6aaff);
 $gradient-bottom-left: linear-gradient(315deg, #abb3deff, #fafea7ff, #dfa5b7ff, #a6baa8ff, #cfb3cdff, #87c09bff, #26cf7dff, #c4abcfff, #bcb1c8ff, #acb6aaff);
-$gradient-radial: radial-gradient(#abb3deff, #fafea7ff, #dfa5b7ff, #a6baa8ff, #cfb3cdff, #87c09bff, #26cf7dff, #c4abcfff, #bcb1c8ff, #acb6aaff);
+$gradient-radial: radial-gradient(#abb3de, #1c3dfc);
 
-$colour-list:
-$wild-blue-yonder,
-$lemon-yellow-crayola,
-$nadeshiko-pink,
-$cambridge-blue,
-$pink-lavender,
-$eton-blue,
-$emerald,
-$lilac,
-$thistle,
-$ash-gray
+$colour-list: #8994D1, #B88EB5, #8994D1, #B88EB5, #8994D1, #B88EB5, #8994D1, #B88EB5, #8994D1, #B88EB5;
+// $wild-blue-yonder,
+// $lemon-yellow-crayola,
+// $nadeshiko-pink,
+// $cambridge-blue,
+// $pink-lavender,
+// $eton-blue,
+// $emerald,
+// $lilac,
+// $thistle,
+// $ash-gray
 ;
 
 $background: #fdfdfd url("img/spiral-notebook-bg.jpg") left top repeat-y;

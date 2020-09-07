@@ -3,6 +3,7 @@
 
 	// Show the navbar when the page is scrolled up
 	var MQL = 992;
+	var is_touch_device = ("ontouchstart" in window) || window.DocumentTouch && document instanceof DocumentTouch;
 
 	//primary navigation slide-in effect
 	if ($(window).width() > MQL) {
@@ -30,7 +31,6 @@
 			}
 		);
 	}
-
 	$(document).ready(function () {
 		// scroll to top button
 		$("#scroller").click(function () {
@@ -40,9 +40,19 @@
 				"slow"
 			);
 		});
-		$('[data-toggle="popover"]').popover();
+		$('[data-toggle="popover"]').popover({
+			trigger: is_touch_device ? "click" : "hover"
+
+		});
+		$('.handwritten').each(function () {
+			var numLow = -20,
+				numHigh = 20;
+			var adjustedHigh = (parseFloat(numHigh) - parseFloat(numLow)) + 1;
+			var numRand = Math.floor(Math.random() * adjustedHigh) + parseFloat(numLow);
+			$(this).css('transform', 'rotate(' + numRand + 'deg)');
+		});
 		if ($('footer.site-footer').length) {
-			let footer_height="12rem";
+			let footer_height = "4.5rem";
 			$('body').css('margin-bottom', footer_height);
 			$('footer.site-footer').css('height', footer_height);
 		}

@@ -1,9 +1,15 @@
 @font-face {
 	font-family: 'ArchitectsDaughter';
 	src:
-	 url("/assets/fonts/architectsdaughter-webfont.woff2") format("woff2"),
-	 url("/assets/fonts/architectsdaughter-webfont.woff") format("woff"),
-	 url('/assets/fonts/ArchitectsDaughter.ttf') format('truetype');
+	 url("fonts/architectsdaughter-webfont.woff2") format("woff2"),
+	 url("fonts/architectsdaughter-webfont.woff") format("woff"),
+	 url('fonts/ArchitectsDaughter.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SqueakyChalkSound';
+	src: url('fonts/SqueakyChalkSound.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }

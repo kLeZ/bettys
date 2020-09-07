@@ -1,0 +1,224 @@
+@include respond-between(md, lg) {
+	.circular-menu-container {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		max-width: none;
+		width: auto;
+	}
+
+	.circular-menu {
+		width: $diameter + px;
+		height: $diameter + px;
+		position: relative;
+		left: 50%;
+		margin: 0;
+		margin-left: -$radius + px;
+		overflow: hidden;
+		border-radius: $borderRadius + px;
+		border-radius: 50%;
+		z-index: 1;
+		list-style: none;
+		box-shadow: 0px 0px 15px #333;
+	}
+
+	.center-section {
+		width: $centerSectionDiameter + px;
+		height: $centerSectionDiameter + px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -$centerSectionDiameter / 2 + px;
+		margin-left: -$centerSectionDiameter / 2 + px;
+		padding: $centerPadding + px;
+		border-radius: $borderRadius + px;
+		border-radius: 50%;
+		text-align: center;
+		background: $center-section-background;
+		box-shadow: inset 0px 0px 15px #333;
+		display: none;
+		z-index: 1;
+	}
+
+	.center-section img.body {
+		height: $centerImage + px;
+	}
+
+	.center-section img.pointer {
+		height: $pointerImage + px;
+		position: absolute;
+		transform-origin: bottom center;
+		top: #{$top-pointer}px;
+	}
+
+	.center-section.section-intro {
+		display: block;
+	}
+
+	//:focus for touch support only
+	.circular-menu li:hover ~ .center-section.section-intro,
+	.touch .circular-menu li:focus ~ .center-section.section-intro {
+		display: none;
+	}
+
+	//:focus for touch support only
+	.touch .circular-menu li:focus {
+		outline: 0;
+	}
+
+	.circular-menu li div.label {
+		position: absolute;
+		width: $labelWidth + px;
+		height: $labelWidth + px;
+		z-index: 2;
+	}
+
+	.circular-menu li div.label p {
+		//custom position of text
+		text-align: center;
+		max-width: $labelWidth * 0.66 + px;
+		margin: 0 auto;
+		margin-top: $labelWidth * 0.4 + px;
+		color: #000000;
+		font-size: $labelFontSize + px;
+	}
+
+	.circular-menu li span.arrow {
+		position: absolute;
+		width: $arrowWidth + px;
+		height: $arrowWidth + px;
+		display: block;
+		transition: all 300ms ease-out;
+		z-index: 2;
+	}
+
+	.circular-menu li .bg {
+		width: $radius + $radius * 0.1 + px;
+		height: $radius + px;
+		position: absolute;
+		transform-origin: 0 ($radius + px);
+		margin-top: -$radius + px;
+		left: 50%;
+		top: 50%;
+		transition: all 300ms ease-out;
+	}
+
+	.circular-menu li {
+		position: absolute;
+		text-decoration: none;
+		top: 50%;
+		left: 50%;
+		display: none;
+	}
+
+	//vars for positionin elements
+	//should work for more menu diameters
+	$deg: 360deg / $items;
+	$arrowHoverRadius: $centerSectionDiameter / 2;
+	$labelRadius: $arrowHoverRadius + ($radius - $arrowHoverRadius) / 2;
+	$arrowRadius: $arrowHoverRadius + $arrowWidth;
+
+	//set rotation
+	@for $i from 1 through $items {
+		$xLabel: sin($deg * $i - $deg - 90) * $labelRadius - $labelWidth / 2 + px;
+		$yLabel: cos($deg * $i - $deg - 90) * $labelRadius - $labelWidth / 2 + px;
+
+		$xArrowHover: sin($deg * $i - $deg - 90) * $arrowHoverRadius - $arrowWidth * 0.5 + px;
+		$yArrowHover: cos($deg * $i - $deg - 90) * $arrowHoverRadius - $arrowWidth * 0.5 + px;
+
+		$xArrow: sin($deg * $i - $deg - 90) * $arrowRadius - $arrowWidth * 0.5 + px;
+		$yArrow: cos($deg * $i - $deg - 90) * $arrowRadius - $arrowWidth * 0.5 + px;
+
+		$xTranslate: -30 + px;
+		$yTranslate: 30 + px;
+
+		.circular-menu li:nth-child(#{$i}) {
+			display: block;
+		}
+
+		//rotate bg
+		.circular-menu li:nth-child(#{$i}) .bg {
+			transform: rotate($deg * $i - $deg / 2 - 90) skew((90 - $deg) * -1);
+			background: nth($colour-list, $i);
+		}
+
+		//bg hover
+		//:focus for touch support only
+		.circular-menu li:nth-child(#{$i}):hover .bg,
+		.touch .circular-menu li:nth-child(#{$i}):focus .bg {
+			background: lighten(nth($colour-list, $i), 10%);
+		}
+
+		//arrow position
+		.circular-menu li:nth-child(#{$i}) span.arrow {
+			transform: rotate($deg * ($i - 1) - 45);
+			margin: $xArrow 0 0 $yArrow;
+			background: nth($colour-list, $i);
+		}
+
+		//pointer position
+		.circular-menu li:nth-child(#{$i}) img.pointer {
+			transform: rotateZ($deg * ($i - 1));
+
+			@if $i > 1 and $i < $items / 2 + 1 {
+				right: #{$right-pointer}px;
+			}
+		}
+
+		//arrow hover
+		//:focus for touch support only
+		.circular-menu li:nth-child(#{$i}):hover span.arrow,
+		.touch .circular-menu li:nth-child(#{$i}):focus span.arrow {
+			background: lighten(nth($colour-list, $i), 10%);
+			margin: $xArrowHover 0 0 $yArrowHover;
+		}
+
+		//position text
+		.circular-menu li:nth-child(#{$i}) div.label {
+			margin: $xLabel 0 0 $yLabel;
+		}
+
+		//center sections
+		//:focus for touch support only
+		.circular-menu li:nth-child(#{$i}):hover div.center-section.section-#{$i},
+		.touch .circular-menu li:nth-child(#{$i}):focus div.center-section.section-#{$i} {
+			display: block;
+		}
+	}
+
+	//animate central content
+	//from animate.css https://daneden.github.io/animate.css/
+	.animated {
+		animation-duration: 0.75s;
+		animation-fill-mode: both;
+	}
+
+	@keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			transform: translate3d(0, 50%, 0);
+		}
+
+		100% {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	.fadeInUp {
+		animation-name: fadeInUp;
+	}
+
+	@keyframes fade {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.fade {
+		animation-name: fade;
+	}
+}
