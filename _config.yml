@@ -1,11 +1,11 @@
 # GitHub Pages jekyll libraries supported with versions: https://pages.github.com/versions/
 timezone: Europe/London
 title: Magic Betty
-email: your-email@example.com
+email: info@magicbetty.com
 description: >-
   This is the website of Roberta Scarpetti. An Applied Theatre Practitioner and Consultant specialising in autism.
-baseurl: "/bettys"
-url: "https://klez.me/bettys"
+baseurl: ""
+url: "https://magicbetty.com"
 copyright: Copyright ©  2020
 
 sass:
