@@ -1,13 +1,11 @@
 <footer class="site-footer w-100 py-3">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-8 col-md-10 mx-auto">
-				{%- include social.html networks=site.data.author.social -%}
-			</div>
-		</div>
-		<div class="row">
-			<div class="col text-left">
+			<div class="col offset-lg-2 text-left">
 				<small class="text-muted">Last build on <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date_to_rfc822 }}</time></small>
+			</div>
+			<div class="col mx-auto">
+				{%- include social.html networks=site.data.author.social -%}
 			</div>
 			<div class="col text-right">
 				<small class="text-muted">{{ site.copyright }}</small>

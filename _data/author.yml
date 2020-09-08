@@ -1,0 +1,9 @@
+name: Roberta Scarpetti
+brand: betty
+email: info@magicbetty.com
+social:
+    - name: email
+      username: info@magicbetty.com
+      icon:
+          type: fa
+          value: fa fa-envelope

@@ -1,7 +1,12 @@
 ---
-layout: default
+layout: page
 title: About me
 permalink: /about/
+header: false
+footer: true
+navbar: false
+row_wrap: false
+up_arrow: false
 ---
 My name is Roberta Scarpetti. However, years ago my little friends decided to call me Betty. Ever since, it has been my nickname, even with my grown up friends.
 
