@@ -11,11 +11,13 @@
 				</div>
 			</div>
 			<div class="col-md-10">
+				{%- if comment.name != "unknown" -%}
 				{%- unless comment.url == blank or comment.url == nil -%}
 				<a class="float-left" href="{{ comment.url | default: '#' }}"><strong>{{ comment.name }}</strong></a>
 				{%- else -%}
 				<strong class="float-left">{{ comment.name }}</strong>
 				{%- endunless -%}
+				{%- endif -%}
 				{{ comment.message | markdownify }}
 				{%- comment -%}
 				<p>
