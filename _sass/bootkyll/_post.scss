@@ -47,3 +47,53 @@
 		}
 	}
 }
+@include respond-above(lg) {
+	.post {
+		article {
+			margin-left: 18rem;
+			padding: 0 1rem;
+			background-color: #33333322;
+			border-radius: 10px;
+		}
+	}
+}
+@include respond-between(md, lg) {
+	.post {
+		article {
+			margin-left: 9rem;
+			padding: 0 1rem;
+			background-color: #33333322;
+			border-radius: 10px;
+		}
+	}
+}
+@include respond-between(sm, md) {
+	.post {
+		article {
+			margin-left: 6rem;
+			padding: 0 1rem;
+			background-color: #33333322;
+			border-radius: 10px;
+		}
+	}
+}
+@include respond-between(xs, sm) {
+	.post {
+		article {
+			margin-left: 4rem;
+			padding: 0 1rem;
+			background-color: #33333322;
+			border-radius: 10px;
+		}
+	}
+}
+@include respond-below(xs) {
+	.post {
+		article {
+			margin-left: 3rem;
+			padding: 0 1rem;
+			background-color: #33333322;
+			border-radius: 10px;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{%- if site.comments.enabled -%}
+	<p class="mx-0 mb-0 mt-5 invisible zero-size">
+		<a href="" class="invisible" id="comments">comments</a>
+	</p>
+	{%- if site.comments.type == "staticman" -%}
+		{%- include staticman-comments-new.html post_url=site.comments.post_url -%}
+	{%- endif -%}
+	{%- assign page_comments = site.data.comments[page.slug] -%}
+	{%- assign social_conf = site.data.social | where: "name", site.comments.avatar_provider | first -%}
+	{%- include comment-list.html comments=page_comments avatar_url=social_conf.url -%}
+{%- endif -%}

@@ -20,12 +20,12 @@ defaults:
           path: ""
       values:
           header: true
-          navbar: true
+          navbar: false
           up_arrow: true
           row_wrap: true
           footer: true
           author:
-              name: Author
+              name: Betty
           header_background_url: ""
     - scope:
           path: ""
@@ -39,8 +39,12 @@ show_excerpts: true
 excerpt_separator: "{% include more.html %}"
 
 comments:
-    enabled: false
-reading_time:
+  enabled: true
+  type: staticman
+  post_url: https://klez-commenter.herokuapp.com/v2/entry/kLeZ/bettys/master/comments/
+  avatar_provider: gravatar
+
+  reading_time:
     enabled: false
 
 markdown: kramdown
