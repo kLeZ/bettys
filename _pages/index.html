@@ -1,28 +1,14 @@
 ---
-layout: default
+layout: page
 permalink: /index.html
-header: false
-footer: true
-navbar: false
 row_wrap: false
 up_arrow: false
+landing: true
 ---
-<div class="row">
-	<div class="col">
-		<div class="text-center">
-			<a href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/brand.png' | relative_url }}" class="img-fluid" style="height: 18em;" /></a>
-			<img src="{{ '/assets/img/logo.png' | relative_url }}" class="img-fluid align-top pl-3" style="height: 18em;" />
-		</div>
-	</div>
-</div>
-<div class="d-flex justify-content-around mt-5" style="height: 8rem;">
-	<div class="handwritten align-self-center">
-		<a href="{{ '/about' | relative_url }}" class="h2 text-decoration-none wild-blue-yonder">About me</a>
-	</div>
-	<div class="handwritten align-self-center">
-		<a href="{{ '/testimonials' | relative_url }}" class="h2 text-decoration-none nadeshiko-pink">Testimonials</a>
-	</div>
-</div>
+<nav class="nav justify-content-around mt-5" style="height: 8rem;">
+	<a class="nav-link h2 handwritten wild-blue-yonder" href="{{ '/about' | relative_url }}">About me</a>
+	<a class="nav-link h2 handwritten nadeshiko-pink" href="{{ '/testimonials' | relative_url }}">Testimonials</a>
+</nav>
 <div class="row">
 	<div class="col">
 		<div class="circular-menu-container">

@@ -3,72 +3,89 @@
 		article {
 			margin-left: 18rem;
 			padding: 0 1rem;
-			background-color: #33333322;
-			border-radius: 10px;
-			header {
-				h1 {
-					font-family: 'SqueakyChalkSound', serif;
-				}
-			}
 		}
 	}
+
+	.site-footer {
+		padding-left: 18rem;
+	}
 }
+
+
 @include respond-between(md, lg) {
 	.page {
 		article {
 			margin-left: 9rem;
 			padding: 0 1rem;
-			background-color: #33333322;
-			border-radius: 10px;
-			header {
-				h1 {
-					font-family: 'SqueakyChalkSound', serif;
-				}
-			}
 		}
 	}
+
+	.site-footer {
+		padding-left: 9rem;
+	}
 }
+
+
 @include respond-between(sm, md) {
 	.page {
 		article {
 			margin-left: 6rem;
 			padding: 0 1rem;
-			background-color: #33333322;
-			border-radius: 10px;
-			header {
-				h1 {
-					font-family: 'SqueakyChalkSound', serif;
-				}
-			}
 		}
 	}
+
+	.site-footer {
+		padding-left: 6rem;
+	}
 }
+
+
 @include respond-between(xs, sm) {
 	.page {
 		article {
 			margin-left: 4rem;
 			padding: 0 1rem;
-			background-color: #33333322;
-			border-radius: 10px;
-			header {
-				h1 {
-					font-family: 'SqueakyChalkSound', serif;
-				}
-			}
 		}
 	}
+
+	.site-footer {
+		padding-left: 4rem;
+	}
 }
+
+
 @include respond-below(xs) {
 	.page {
 		article {
 			margin-left: 3rem;
 			padding: 0 1rem;
-			background-color: #33333322;
-			border-radius: 10px;
-			header {
-				h1 {
-					font-family: 'SqueakyChalkSound', serif;
-				}
+		}
+	}
+
+	.site-footer {
+		padding-left: 3rem;
+	}
+}
+
+
+.page {
+	article {
+		background-color: #33333322;
+		border-radius: 10px;
+
+		header {
+			h1 {
+				font-family: 'SqueakyChalkSound', serif;
+			}
+		}
+	}
+}
+
+.landing-page {
+	main {
+		.page {
+			article {
+				background-color: transparent;
 			}
 		}
 	}

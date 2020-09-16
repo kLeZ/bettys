@@ -5,7 +5,7 @@ permalink: /about/
 ---
 My name is Roberta Scarpetti. However, years ago my little friends decided to call me Betty. Ever since, it has been my nickname, even with my grown up friends.
 
-I am an Applied Theatre Practitioner and Consultant specialising in autism.
+I am an Applied Theatre Practitioner and Consultant specialised in autism.
 
 Born by the Italian seaside I began working with children at the age of 16 with planning and delivering entertainment for children's birthday parties. I enjoyed it so much that over the years I kept doing it during school holidays, on weekends, and in my spare time.
 
