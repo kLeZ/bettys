@@ -42,8 +42,8 @@
 		});
 		$('[data-toggle="popover"]').popover({
 			trigger: is_touch_device ? "click" : "hover"
-
 		});
+		$('.circular-menu-container').toggleClass('touch', is_touch_device);
 		$('.handwritten').each(function () {
 			var numLow = -20,
 				numHigh = 20;

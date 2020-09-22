@@ -7,3 +7,8 @@ social:
       icon:
           type: fa
           value: fa fa-envelope
+    - name: tel
+      username: "+447841634637"
+      icon:
+          type: fa
+          value: fa fa-phone
