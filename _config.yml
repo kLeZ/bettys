@@ -6,7 +6,22 @@ description: >-
   This is the website of Roberta Scarpetti. An Applied Theatre Practitioner and Consultant specialised in autism.
 baseurl: ""
 url: "https://magicbetty.com"
-copyright: Copyright ©  2020
+copyright: Copyright © Alessandro Accardo 2020
+
+about_author: >-
+  Hey! If you're looking at the source code you might be a real supah h4x0r!
+  
+  No no, Really.
+  
+  I'm Alessandro a.k.a. kLeZ, the author of this web place, made with love for a friend.
+  
+  If you think this work could be somewhat appreciated please star the repository on github, where the source for this website is gently kept safe.
+  
+  If you like my works, star any other repository you may like from the list.
+  
+  Please feel free to contact me in one of the social channels you can find on my website (link at the bottom of the page).
+
+
 
 sass:
     sass_dir: _sass
