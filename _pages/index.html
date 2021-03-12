@@ -13,8 +13,10 @@ landing: true
 	<div class="col">
 		<div class="circular-menu-container">
 			<ul class="circular-menu">
-				<li class="" tabindex="1">
-					<div class="center-section section-1">
+				{%- for item in site.data.menu.items -%}
+				{%- assign i = forloop.index -%}
+				<li tabindex="{{ i }}">
+					<div class="center-section section-{{ i }}">
 						<div>
 							<img src="{{ '/assets/img/pointer.png' | relative_url }}" class="pointer img-fluid animated fade" />
 							<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
@@ -23,128 +25,10 @@ landing: true
 					<span class="arrow"></span>
 					<div class="bg"></div>
 					<div class="label">
-						<p data-toggle="popover" data-trigger="hover" data-placement="top" data-html="true" title="Confidence" data-content="Is your child timid? Is he shy to speak up? Is he reticent to join conversations or group activities? I believe that confidence is the bedrock and gateway to <i>all</i> skills. Once a child believes in himself he can achieve anything, but more importantly, he won’t be scared of obstacles or rejection.">Confidence</p>
+						<p data-toggle="popover" data-trigger="hover" data-placement="{{ item.placement }}" data-html="true" title="{{ item.title }}" data-content="{{ item.content }}">{{ item.title }}</p>
 					</div>
 				</li>
-				<li class="" tabindex="2">
-					<div class="center-section section-2">
-						<div>
-							<img src="{{ '/assets/img/pointer.png' | relative_url }}" class="pointer img-fluid animated fade" />
-							<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
-						</div>
-					</div>
-					<span class="arrow"></span>
-					<div class="bg"></div>
-					<div class="label">
-						<p data-toggle="popover" data-trigger="hover" data-placement="top" data-html="true" title="Fees" data-content="-Initial consultation £40 plus travel expenses.<br />
-						- Follow-on sessions £25 per hour plus travel expenses">Fees</p>
-					</div>
-				</li>
-				<li class="" tabindex="3">
-					<div class="center-section section-3">
-						<div>
-							<img src="{{ '/assets/img/pointer.png' | relative_url }}" class="pointer img-fluid animated fade" />
-							<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
-						</div>
-					</div>
-					<span class="arrow"></span>
-					<div class="bg"></div>
-					<div class="label">
-						<p data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true" title="Special Needs" data-content="Children with learning or minor physical disabilities will need extra attention to learn how to navigate and cope with life. Your child might find this challenging and frustrating but with the right techniques, smiles, enthusiasm and support, he will find a world full of possibilities.">Special Needs</p>
-					</div>
-				</li>
-				<li class="" tabindex="4">
-					<div class="center-section section-4">
-						<div>
-							<img src="{{ '/assets/img/pointer.png' | relative_url }}" class="pointer img-fluid animated fade" />
-							<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
-						</div>
-					</div>
-					<span class="arrow"></span>
-					<div class="bg"></div>
-					<div class="label">
-						<p data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true" title="LAMDA" data-content="Children and adults hear the word &quot;exam&quot; and they freeze. The prestigious London Academy of Music and Dramatic Art (LAMDA) Exams help children build confidence, encourage imagination and lay the bases for public speaking. In addition, children who participate in LAMDA earn credits from the exams that will help through the school years.<br />
-							Preparing for those exams are key and should not be thought of as a chore. Exam prep can and should be fun ensuring that what your child learns will stick in her mind and will be used on the exam and in life.">LAMDA</p>
-					</div>
-				</li>
-				<li class="" tabindex="5">
-					<div class="center-section section-5">
-						<div>
-							<img src="{{ '/assets/img/pointer.png' | relative_url }}" class="pointer img-fluid animated fade" />
-							<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
-						</div>
-					</div>
-					<span class="arrow"></span>
-					<div class="bg"></div>
-					<div class="label">
-						<p data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true" title="Behaviour Management" data-content="Similar to adults, children feel overwhelmed and overstimulated at times. Sadly, this is an aspect of modern life. If your child is experiencing these feelings, it's important to guide and give her the tools to handle and cope with any situation that will come her way. Through my work, I believe that children can learn to identify and listen to their own feelings and model good behaviour.">Behaviour Management</p>
-					</div>
-				</li>
-				<li class="" tabindex="6">
-					<div class="center-section section-6">
-						<div>
-							<img src="{{ '/assets/img/pointer.png' | relative_url }}" class="pointer img-fluid animated fade" />
-							<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
-						</div>
-					</div>
-					<span class="arrow"></span>
-					<div class="bg"></div>
-					<div class="label">
-						<p data-toggle="popover" data-trigger="hover" data-placement="top" data-html="true" title="Speech and Language" data-content="We express our thoughts and desires through verbal and non-verbal communication--these are essential skills in any aspect of life. If babies and young children are taught and encouraged to communicate effectively, their confidence and creativity will flow naturally, allowing them to become successful individuals.">Speech and Language</p>
-					</div>
-				</li>
-				<li class="" tabindex="7">
-					<div class="center-section section-7">
-						<div>
-							<img src="{{ '/assets/img/pointer.png' | relative_url }}" class="pointer img-fluid animated fade" />
-							<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
-						</div>
-					</div>
-					<span class="arrow"></span>
-					<div class="bg"></div>
-					<div class="label">
-						<p>Menu item</p>
-					</div>
-				</li>
-				<li class="" tabindex="8">
-					<div class="center-section section-8">
-						<div>
-							<img src="{{ '/assets/img/pointer.png' | relative_url }}" class="pointer img-fluid animated fade" />
-							<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
-						</div>
-					</div>
-					<span class="arrow"></span>
-					<div class="bg"></div>
-					<div class="label">
-						<p>Menu item</p>
-					</div>
-				</li>
-				<li class="" tabindex="9">
-					<div class="center-section section-9">
-						<div>
-							<img src="{{ '/assets/img/pointer.png' | relative_url }}" class="pointer img-fluid animated fade" />
-							<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
-						</div>
-					</div>
-					<span class="arrow"></span>
-					<div class="bg"></div>
-					<div class="label">
-						<p>Menu item</p>
-					</div>
-				</li>
-				<li class="" tabindex="10">
-					<div class="center-section section-10">
-						<div>
-							<img src="{{ '/assets/img/pointer.png' | relative_url }}" class="pointer img-fluid animated fade" />
-							<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
-						</div>
-					</div>
-					<span class="arrow"></span>
-					<div class="bg"></div>
-					<div class="label">
-						<p>Menu item</p>
-					</div>
-				</li>
+				{%- endfor -%}
 				<div class="center-section section-intro">
 					<div class="animated">
 						<img src="{{ '/assets/img/menu_body.png' | relative_url }}" class="body img-fluid" />
